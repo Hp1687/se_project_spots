@@ -8,7 +8,7 @@
   margin: 0;
   display: grid;
   gap: 40px 20px;
-  grid-template-columns: 1fr; /* mobile: single column */
+  grid-template-columns: repeat(3, 1fe); /* mobile: single column */
 }
 
 /* ===========================
