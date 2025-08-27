@@ -22,8 +22,6 @@
   font-weight: 500;
   font-size: 24px;
   max-width: 420px;
-
-  white-space: nowrap; /* Single line only */
   overflow: hidden; /* Hide overflow */
   text-overflow: ellipsis; /* Add … */
 }
@@ -149,7 +147,6 @@
   font-size: 24px;
   max-width: 420px;
 
-  white-space: nowrap; /* Single line only */
   overflow: hidden; /* Hide overflow */
   text-overflow: ellipsis; /* Add … */
 }
@@ -158,7 +155,6 @@
 .profile__description {
   margin: 0;
   max-width: 420px;
-
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3; /* Limit to 3 lines */
