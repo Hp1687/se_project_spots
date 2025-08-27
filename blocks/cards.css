@@ -1,0 +1,73 @@
+.cards {
+  padding-top: 20px;
+}
+
+.cards__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 40px 20px;
+  grid-template-columns: 1fr; /* mobile: single column */
+}
+
+/* ===========================
+   Individual Card
+   =========================== */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+}
+
+/* Card content layout */
+.card__content {
+  display: flex;
+  justify-content: space-between; /* title left, button right */
+  align-items: center; /* vertically aligned */
+  padding: 12px;
+}
+
+.card__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card__like-btn {
+  width: 24px;
+  height: 24px;
+  background: url("../images/like.svg") no-repeat center/cover;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===========================
+   Mobile View (≤629px)
+   =========================== */
+@media (max-width: 629px) {
+  .card {
+    max-width: 288px; /* match Figma’s 320px frame minus padding */
+    margin: 0 auto; /* center the card */
+  }
+}
+
+/* ===========================
+   Tablet View (630px–1319px)
+   =========================== */
+@media (min-width: 630px) and (max-width: 1319px) {
+  .cards__list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+/* ===========================
+   Desktop View (1320px+)
+   =========================== */
+@media (min-width: 1320px) {
+  .cards__list {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}

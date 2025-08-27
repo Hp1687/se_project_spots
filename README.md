@@ -1,21 +1,16 @@
- # Project 3: Spots
+# Spots Project
 
-### Overview  
+## Project Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+Spots is a creative web project showcasing modern web design with a clean layout and responsive design. The project allows users to view a profile, browse a gallery of cards with images, and interact with elements like buttons. It demonstrates handling text overflow, responsive layouts for mobile and desktop, and UI elements with hover states.
+
+## Technologies Used
+
+- **HTML5** for semantic structure.
+- **CSS3** for styling, flexbox layout, media queries, and text truncation techniques.
+- **Responsive Design** using media queries for mobile, tablet, and desktop views.
+
+## Deployment
+
+The project is deployed on GitHub Pages and can be viewed here:  
+[Spots Project on GitHub Pages](https://yourusername.github.io/spots-project/)
