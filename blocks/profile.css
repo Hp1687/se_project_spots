@@ -8,6 +8,9 @@
   margin-right: 20px;
   width: 190px;
   height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
 }
 
 .profile__column {
@@ -16,23 +19,22 @@
   margin-right: 20px;
 }
 
-/* --- Name: single-line truncation --- */
 .profile__name {
   margin: 0 0 12px;
   font-weight: 500;
   font-size: 24px;
   max-width: 420px;
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add … */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* --- Description: multi-line truncation (3 lines) --- */
 .profile__description {
   margin: 0;
   max-width: 420px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -43,6 +45,7 @@
   background: #000;
   color: #fff;
   max-width: 150px;
+  padding: 6px 12px;
 }
 
 .profile__edit-btn {
@@ -55,15 +58,6 @@
   max-width: 150px;
 }
 
-.profile__image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ddd;
-}
-
-/* --- Responsive --- */
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
@@ -105,134 +99,10 @@
   }
 }
 
-/* =======================
-   Single-line truncation demo
-======================= */
-.block {
-  max-width: 200px; /* adjust as needed */
+.block,
+.card__title {
+  max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 1px solid #ccc; /* optional, just so you can see the box */
-  padding: 4px;
-}
-/* =======================
-   Profile Section
-======================= */
-.profile {
-  display: flex;
-  padding: 34px 0 20px;
-  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
-}
-
-.profile__avatar {
-  margin-right: 20px;
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ddd;
-}
-
-.profile__column {
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-}
-
-/* --- Name: single-line truncation --- */
-.profile__name {
-  margin: 0 0 12px;
-  font-weight: 500;
-  font-size: 24px;
-  max-width: 420px;
-
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add … */
-}
-
-/* --- Description: multi-line truncation (3 lines) --- */
-.profile__description {
-  margin: 0;
-  max-width: 420px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Limit to 3 lines */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* --- Buttons --- */
-.profile__add-btn {
-  margin-top: auto;
-  margin-left: auto;
-  background: #000;
-  color: #fff;
-  max-width: 150px;
-  padding: 6px 12px;
-}
-
-.profile__edit-btn {
-  margin-top: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  width: auto;
-  max-width: 150px;
-}
-
-/* =======================
-   Responsive: Mobile
-======================= */
-@media screen and (max-width: 627px) {
-  .profile {
-    flex-direction: column;
-    max-width: 288px;
-    align-items: center;
-    text-align: center;
-    padding-top: 20px;
-  }
-
-  .profile__avatar {
-    margin: 0 0 12px;
-    height: 80px;
-    width: 80px;
-  }
-
-  .profile__name {
-    font-size: 20px;
-    margin: 0 0 6px;
-    max-width: 288px;
-  }
-
-  .profile__description {
-    font-size: 16px;
-    margin: 0 0 32px;
-    max-width: 288px;
-  }
-
-  .profile__column {
-    margin: 0 0 20px;
-  }
-
-  .profile__add-btn {
-    margin: 0;
-    width: 100%;
-  }
-
-  .profile__edit-btn {
-    margin: 0 auto;
-  }
-}
-
-/* =======================
-   Card Titles & Single-Line Demo
-======================= */
-.block,
-.card__title {
-  max-width: 200px; /* Adjust as needed */
-  white-space: nowrap; /* Single line only */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add … */
 }

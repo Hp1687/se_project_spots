@@ -13,4 +13,4 @@ Spots is a creative web project showcasing modern web design with a clean layout
 ## Deployment
 
 The project is deployed on GitHub Pages and can be viewed here:  
-[Spots Project on GitHub Pages](https://yourusername.github.io/spots-project/)
+[Spots Project on GitHub Pages](https://hp1687.github.io/se_project_spots/)
