@@ -10,9 +10,3 @@
   height: 26px;
   object-fit: cover;
 }
-
-.header__title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-align: center;
-}
