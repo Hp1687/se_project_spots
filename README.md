@@ -17,4 +17,4 @@ The project is deployed on GitHub Pages and can be viewed here:
 
 ## 🎥 Project Video
 
-[Watch the project video here] ( <https://drive.google.com/file/d/11Kj1ZLsb2NzVumZWNFshFuTSIB7TEPQS/view>? )usp=drive_link
+[Watch the project video here](https://drive.google.com/file/d/11Kj1ZLsb2NzVumZWNFshFuTSIB7TEPQS/view?usp=drive_link)
