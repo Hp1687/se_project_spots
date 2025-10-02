@@ -19,7 +19,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 100%;
+  max-width: 353px;
 }
 
 .card__content {
@@ -48,7 +48,7 @@
   background-image: url("../images/heart-filled.svg");
 }
 
-@media screen and (max-width: 629px) {
+@media screen and (max-width: 235px) {
   .card {
     max-width: 288px;
     margin: 0 auto;

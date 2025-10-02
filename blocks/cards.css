@@ -1,5 +1,6 @@
 .cards {
-  padding-top: 20px;
+  padding: 20px 0 40px;
+  border-bottom: 1px solid #21212166;
 }
 
 .cards__list {
@@ -8,16 +9,8 @@
   margin: 0;
   display: grid;
   gap: 40px 20px;
-  grid-template-columns: repeat(3, 1fr); /* default: 3 columns */
-}
-
-/* ===========================
-   Tablet View (630px–1319px)
-   =========================== */
-@media (min-width: 630px) and (max-width: 1319px) {
-  .cards__list {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  }
+  grid-template-columns: repeat(auto-fit, 413px);
+  justify-content: center;
 }
 
 /* ===========================
