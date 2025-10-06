@@ -48,7 +48,7 @@
   background-image: url("../images/heart-filled.svg");
 }
 
-@media screen and (max-width: 235px) {
+@media screen and (max-width: 635px) {
   .card {
     max-width: 288px;
     margin: 0 auto;
