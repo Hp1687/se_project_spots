@@ -1,0 +1,24 @@
+{
+  "name": "se_project_spots",
+  "version": "1.0.0",
+  "description": "Spots is a creative web project showcasing modern web design with a clean layout and responsive design. The project allows users to view a profile, browse a gallery of cards with images, and interact with elements like buttons. It demonstrates handling text overflow, responsive layouts for mobile and desktop, and UI elements with hover states.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hp1687/se_project_spots.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hp1687/se_project_spots/issues"
+  },
+  "homepage": "https://github.com/Hp1687/se_project_spots#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
