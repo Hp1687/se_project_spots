@@ -1,0 +1,6 @@
+# Ignore build output
+node_modules
+dist
+
+# Ignore third-party styles
+vendor/normalize.css
