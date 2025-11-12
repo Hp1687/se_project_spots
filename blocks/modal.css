@@ -1,8 +1,6 @@
 /* TODO - add correct font styles for everything */
 /* TODO - responsiv design */
 .modal {
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -11,7 +9,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Prevent interaction when hidden */
   z-index: 100;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth open/close */
 }
 
 .modal_is-opened {
@@ -40,7 +42,7 @@
   width: 40px;
   height: 40px;
   border: none;
-  background: transparent; 
+  background: transparent;
   padding: 0;
   cursor: pointer;
   display: flex;
@@ -117,6 +119,12 @@
   .modal__container {
     padding: 24px;
   }
+
+  /* Mobile-friendly font size for inputs */
+  .modal__input {
+    font-size: 16px;
+  }
+}
 
   .modal__close-btn {
     top: 16px;

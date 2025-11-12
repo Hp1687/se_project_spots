@@ -19,9 +19,16 @@
 
 .profile__name {
   margin: 0 0 12px;
-  font-weight: 500;
-  font-size: 24px;
+  font-size: 32px; /* Update from Figma */
+  font-weight: 500; /* Verify from Figma */
+  color: #000; /* Add correct color from Figma */
+  line-height: 1.2; /* Add correct line-height from Figma */
   max-width: 420px;
+
+  /* Multi-line truncation setup */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Allow 2 lines before truncating */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -32,7 +39,6 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -46,6 +52,15 @@
   height: 52px;
   border-radius: 8px;
   color: #fcf5e5;
+
+  border: none; /* Reset default button border */
+  cursor: pointer; /* Show pointer on hover */
+  transition: opacity 0.3s, transform 0.2s; /* Smooth feedback */
+}
+
+.profile__add-btn:hover {
+  opacity: 0.9; /* Slight fade on hover */
+  transform: scale(1.02); /* Subtle zoom effect */
 }
 
 .profile__edit-btn {
@@ -58,6 +73,14 @@
   padding: 6px 12px;
   width: auto;
   max-width: 150px;
+
+  cursor: pointer; /* Show pointer on hover */
+  transition: opacity 0.3s, transform 0.2s; /* Smooth hover feedback */
+}
+
+.profile__edit-btn:hover {
+  opacity: 0.8; /* Slight fade on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
 }
 
 @media screen and (max-width: 627px) {
