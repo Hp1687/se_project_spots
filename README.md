@@ -6,6 +6,15 @@ Spots is a creative web project showcasing modern web design with a clean layout
 
 ## Technologies Used
 
+- **HTML5** — for semantic structure and accessible page layout.
+- **CSS3** — for responsive design, flexbox/grid layouts, and smooth transitions.
+- **JavaScript (ES6)** — for interactivity:
+  - Handles modal open/close functionality.
+  - Prefills the Edit Profile form with existing user data.
+  - Updates profile information dynamically.
+  - Logs new post data to the console on form submission.
+- **Normalize.css** — to ensure consistent styling across browsers.
+
 - **HTML5** for semantic structure.
 - **CSS3** for styling, flexbox layout, media queries, and text truncation techniques.
 - **Responsive Design** using media queries for mobile, tablet, and desktop views.
