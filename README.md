@@ -9,10 +9,11 @@ Spots is a creative web project showcasing modern web design with a clean layout
 - **HTML5** — for semantic structure and accessible page layout.
 - **CSS3** — for responsive design, flexbox/grid layouts, and smooth transitions.
 - **JavaScript (ES6)** — for interactivity:
-  - Handles modal open/close functionality.
+  - Opens and closes modals for editing profile and creating new posts
   - Prefills the Edit Profile form with existing user data.
-  - Updates profile information dynamically.
-  - Logs new post data to the console on form submission.
+  - Dynamically updates profile information on submission.
+  - Handles adding new posts and logs data to the console.
+  - Adds hover and click interactions for buttons and cards.
 - **Normalize.css** — to ensure consistent styling across browsers.
 
 - **HTML5** for semantic structure.
