@@ -52,6 +52,17 @@ const postCaptionInput = newPostModal.querySelector("#post-caption-input");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+// Cards
+const cardsList = document.querySelector(".cards__list");
+const cardTemplate = document.querySelector("#card-template");
+
+// Image Preview Modal
+const imagePreviewModal = document.querySelector("#image-preview-modal");
+const previewImageEl = imagePreviewModal.querySelector(".modal__image");
+const previewCaptionEl = imagePreviewModal.querySelector(".modal__caption");
+const imagePreviewCloseBtn =
+  imagePreviewModal.querySelector(".modal__close-btn");
+
 // --- REUSABLE MODAL FUNCTIONS ---
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
@@ -65,8 +76,57 @@ function closeModal(modal) {
 document.addEventListener("keydown", (evt) => {
   if (evt.key === "Escape") {
     const openModalEl = document.querySelector(".modal_is-opened");
-    if (openModalEl) closeModal(openModalEl);
+    if (openModalEl) {
+      closeModal(openModalEl);
+    }
   }
+});
+
+// --- CARD CREATION ---
+
+function getCardElement(data) {
+  // Clone the template content
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+
+  // Select elements inside the card
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+
+  // Set content
+  cardTitle.textContent = data.name;
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+
+  // Like button: toggle active class
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("card__like-button_active");
+  });
+
+  // Delete button: remove the card
+  deleteButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
+  // Image click: open preview modal
+  cardImage.addEventListener("click", () => {
+    previewImageEl.src = data.link;
+    previewImageEl.alt = data.name;
+    previewCaptionEl.textContent = data.name;
+    openModal(imagePreviewModal);
+  });
+
+  return cardElement;
+}
+
+// Render initial cards from the array
+initialCards.forEach((item) => {
+  const cardElement = getCardElement(item);
+  // Prepend so the first item ends up visually at the top
+  cardsList.prepend(cardElement);
 });
 
 // --- EDIT PROFILE MODAL ---
@@ -107,16 +167,23 @@ newPostCloseBtn.addEventListener("click", () => {
 // Handle New Post form submission
 function handleNewPostFormSubmit(evt) {
   evt.preventDefault();
-  console.log("Image URL:", postImageInput.value);
-  console.log("Caption:", postCaptionInput.value);
+
+  const cardData = {
+    name: postCaptionInput.value,
+    link: postImageInput.value,
+  };
+
+  const newCard = getCardElement(cardData);
+  cardsList.prepend(newCard); // new card appears first
+
+  newPostForm.reset();
   closeModal(newPostModal);
 }
 
 // Add form submit listener
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
 
-// --- Log card names to console ---
-initialCards.forEach(function (item) {
-  console.log(item.name);
-  console.log(item.link);
+// --- IMAGE PREVIEW MODAL CLOSE ---
+imagePreviewCloseBtn.addEventListener("click", () => {
+  closeModal(imagePreviewModal);
 });
