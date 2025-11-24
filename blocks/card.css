@@ -5,10 +5,21 @@
 }
 
 .card__image {
+  cursor: pointer;
   border-radius: 8px;
   height: 413px;
   width: 413px;
   object-fit: cover;
+}
+
+.card__image:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card__image:focus {
+  outline: 2px solid #0066cc;
 }
 
 .card__title {
@@ -30,7 +41,7 @@
   background-color: transparent;
 }
 
-.card__like-btn {
+.card__like-button {
   background: url("../images/heart.svg") no-repeat center;
   width: 24px;
   height: 24px;
@@ -38,6 +49,11 @@
   background-color: transparent;
   opacity: 40%;
   cursor: pointer;
+}
+
+.card__like-button_active {
+  background: url("../images/heart-filled.svg") no-repeat center;
+  opacity: 100%;
 }
 
 .card__like-btn:hover {
@@ -48,7 +64,7 @@
   background-image: url("../images/heart-filled.svg");
 }
 
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 630px) {
   .card {
     max-width: 288px;
     margin: 0 auto;
@@ -58,4 +74,62 @@
     height: 288px;
     width: 288px;
   }
+}
+
+.card__delete-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/delete-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__delete-button:hover {
+  opacity: 1;
+}
+
+/* Show the delete icon when hovering over the card */
+.card:hover .card__delete-button {
+  opacity: 1;
+}
+
+/* Optional: add hover feedback */
+.card__delete-button:hover {
+  opacity: 0.7;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: transparent;
+}
+
+.card__like-button {
+  width: 21px;
+  height: 18px;
+  background-image: url("../images/heart.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.card__like-button:hover {
+  opacity: 0.6;
+}
+
+.card__like-button_active {
+  background-image: url("../images/heart.svg");
 }

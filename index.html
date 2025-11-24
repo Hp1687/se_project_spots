@@ -9,7 +9,6 @@
     />
     <meta name="author" content="Harry Patel" />
     <meta name="keywords" content="Spots, web design, HTML, CSS, project" />
-    <link rel="stylesheet" href="blocks/popup/popup.css" />
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <title>Spots</title>
@@ -61,12 +60,10 @@
                 type="button"
                 aria-label="Delete card"
               ></button>
-              <div class="card__footer">
+              <div class="card__content">
                 <h2 class="card__title"></h2>
-                <button
+                <button class="card__like-button"
                   aria-label="Like card"
-                  class="card__like-button"
-                  type="button"
                 ></button>
               </div>
             </li>
@@ -143,7 +140,7 @@
           <button type="button" class="modal__close-btn">
             <img src="./images/close-icon.svg" alt="Close" />
           </button>
-          <img class="modal__image" alt="" />
+          <img class="modal__image" src="#" alt="Preview image" />
           <p class="modal__caption"></p>
         </div>
       </div>

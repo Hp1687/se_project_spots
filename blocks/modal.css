@@ -144,3 +144,50 @@
     margin-bottom: 24px;
   }
 }
+
+.modal__container_type_image {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.modal__image {
+  max-width: min(80vw, 800px);  /* keeps it big but not massive on desktop */
+  max-height: 80vh;             /* never taller than the viewport */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal__caption {
+  margin-top: 12px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Optional: extra breathing room on small phones */
+@media (max-width: 480px) {
+  .modal__image {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+}
+
+
+.modal__container_type_image .modal__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+  .modal__caption {
+    font-size: 12px;
+  }
+

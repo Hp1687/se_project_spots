@@ -28,20 +28,22 @@
   /* Multi-line truncation setup */
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   -webkit-line-clamp: 2; /* Allow 2 lines before truncating */
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .profile__description {
   margin: 0;
   max-width: 420px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 .profile__add-btn {
   margin-top: auto;
@@ -83,7 +85,7 @@
   transform: scale(1.05); /* Subtle zoom effect */
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 630px) {
   .profile {
     flex-direction: column;
     max-width: 288px;

@@ -16,7 +16,7 @@
 /* ===========================
    Mobile View (≤629px)
    =========================== */
-@media (max-width: 629px) {
+@media (max-width: 630px) {
   .cards__list {
     grid-template-columns: 1fr; /* single column */
   }
