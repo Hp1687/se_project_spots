@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Hp1687/se_project_spots#readme",
   "devDependencies": {
+    "chokidar": "^5.0.0",
     "live-server": "^1.2.0"
   }
 }
