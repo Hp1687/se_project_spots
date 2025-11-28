@@ -80,8 +80,6 @@
 .card__like-button {
   width: 24px;
   height: 24px;
-  background: url("../images/heart.svg") no-repeat center;
-  background-size: contain;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -95,7 +93,8 @@
 
 /* active (liked) state */
 .card__like-button_active {
-  background-image: url("../images/heart-filled.svg");
+  background-color: red;
+  border-radius: 50%;
   opacity: 1;
 }
 
