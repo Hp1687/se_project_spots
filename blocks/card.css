@@ -41,41 +41,16 @@
   background-color: transparent;
 }
 
-.card__like-button {
-  background: url("../images/heart.svg") no-repeat center;
-  width: 24px;
-  height: 24px;
-  border: none;
+/* footer layout */
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
   background-color: transparent;
-  opacity: 40%;
-  cursor: pointer;
 }
 
-.card__like-button_active {
-  background: url("../images/heart-filled.svg") no-repeat center;
-  opacity: 100%;
-}
-
-.card__like-btn:hover {
-  opacity: 1;
-}
-
-.card__like-btn.liked {
-  background-image: url("../images/heart-filled.svg");
-}
-
-@media screen and (max-width: 630px) {
-  .card {
-    max-width: 288px;
-    margin: 0 auto;
-  }
-
-  .card__image {
-    height: 288px;
-    width: 288px;
-  }
-}
-
+/* DELETE BUTTON */
 .card__delete-button {
   position: absolute;
   top: 16px;
@@ -92,44 +67,46 @@
   transition: opacity 0.3s ease;
 }
 
-.card__delete-button:hover {
-  opacity: 1;
-}
-
-/* Show the delete icon when hovering over the card */
+/* show delete on card hover */
 .card:hover .card__delete-button {
   opacity: 1;
 }
 
-/* Optional: add hover feedback */
 .card__delete-button:hover {
   opacity: 0.7;
 }
 
-.card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;
-  background-color: transparent;
-}
-
+/* LIKE BUTTON – base + active modifier ONLY */
 .card__like-button {
-  width: 21px;
-  height: 18px;
-  background-image: url("../images/heart.svg");
+  width: 24px;
+  height: 24px;
+  background: url("../images/heart.svg") no-repeat center;
   background-size: contain;
-  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  opacity: 0.4;
   transition: opacity 0.3s ease;
 }
 
 .card__like-button:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
+/* active (liked) state */
 .card__like-button_active {
-  background-image: url("../images/heart.svg");
+  background-image: url("../images/heart-filled.svg");
+  opacity: 1;
+}
+
+@media screen and (max-width: 630px) {
+  .card {
+    max-width: 288px;
+    margin: 0 auto;
+  }
+
+  .card__image {
+    height: 288px;
+    width: 288px;
+  }
 }

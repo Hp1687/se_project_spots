@@ -72,7 +72,7 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
-// Optional: close modal on Escape key
+// Close modal on Escape key
 document.addEventListener("keydown", (evt) => {
   if (evt.key === "Escape") {
     const openModalEl = document.querySelector(".modal_is-opened");
@@ -101,7 +101,7 @@ function getCardElement(data) {
   cardImage.src = data.link;
   cardImage.alt = data.name;
 
-  // Like button: toggle active class
+  // Like button: toggle active modifier
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
   });
@@ -122,10 +122,9 @@ function getCardElement(data) {
   return cardElement;
 }
 
-// Render initial cards from the array
+// Render initial cards
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
-  // Prepend so the first item ends up visually at the top
   cardsList.prepend(cardElement);
 });
 
@@ -150,7 +149,6 @@ function handleEditProfileFormSubmit(evt) {
   closeModal(editProfileModal);
 }
 
-// Add form submit listener
 editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
 
 // --- NEW POST MODAL ---
@@ -174,13 +172,12 @@ function handleNewPostFormSubmit(evt) {
   };
 
   const newCard = getCardElement(cardData);
-  cardsList.prepend(newCard); // new card appears first
+  cardsList.prepend(newCard);
 
   newPostForm.reset();
   closeModal(newPostModal);
 }
 
-// Add form submit listener
 newPostForm.addEventListener("submit", handleNewPostFormSubmit);
 
 // --- IMAGE PREVIEW MODAL CLOSE ---
