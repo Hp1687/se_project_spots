@@ -78,6 +78,16 @@ document.addEventListener("keydown", (evt) => {
   }
 });
 
+// --- CLOSE MODAL ON OVERLAY CLICK ---
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    // If user clicked the overlay (not the modal content)
+    if (evt.target === evt.currentTarget) {
+      closeModal(modal);
+    }
+  });
+});
+
 // --- CARD CREATION ---
 function getCardElement(data) {
   const cardElement = cardTemplate.content

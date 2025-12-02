@@ -41,15 +41,6 @@
   background-color: transparent;
 }
 
-/* footer layout */
-.card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;
-  background-color: transparent;
-}
-
 /* DELETE BUTTON */
 .card__delete-button {
   position: absolute;
@@ -80,6 +71,9 @@
 .card__like-button {
   width: 24px;
   height: 24px;
+  background-image: url("../images/heart.svg"); /* empty heart */
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -87,8 +81,9 @@
   transition: opacity 0.3s ease;
 }
 
-.card__like-button:hover {
-  opacity: 0.8;
+.card__like-button_active {
+  background-image: url("../images/heart-filled.svg"); /* filled heart */
+  opacity: 1;
 }
 
 /* active (liked) state */

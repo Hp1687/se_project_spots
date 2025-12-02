@@ -101,7 +101,8 @@
 
 .modal__submit-btn {
   max-width: 156px;
-  padding: 12px 16px;
+  width: 100%;
+  padding: 18px 0;
   font-size: 16px;
   font-weight: 600;
   background-color: #000;
@@ -120,45 +121,44 @@
 @media screen and (max-width: 768px) {
   .modal__container {
     padding: 24px;
+    max-width: calc(100% - 40px); /* ← ADD this line */
   }
+}
 
-  /* Mobile-friendly font size for inputs */
-  .modal__input {
-    font-size: 16px;
-  }
+/* Mobile-friendly font size for inputs */
+.modal__input {
+  font-size: 16px;
+}
 
-  .modal__close-btn {
-    top: 16px;
-    right: 16px;
-    width: 28px;
-    height: 28px;
-  }
+.modal__close-btn {
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+}
 
-  .modal__submit-btn {
-    max-width: 100%;
-    width: 100%;
-  }
+.modal__submit-btn {
+  max-width: 100%;
+  width: 100%;
+}
 
-  .modal__title {
-    font-size: 20px;
-    margin-bottom: 24px;
-  }
+.modal__title {
+  font-size: 20px;
+  margin-bottom: 24px;
 }
 
 .modal__container_type_image {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
   max-width: 90vw;
   max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 20px;
+  box-shadow: none; /* remove shadows if inherited */
 }
 
 .modal__image {
-  max-width: min(80vw, 800px);  /* keeps it big but not massive on desktop */
-  max-height: 80vh;             /* never taller than the viewport */
+  max-width: min(80vw, 800px); /* keeps it big but not massive on desktop */
+  max-height: 80vh; /* never taller than the viewport */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -179,15 +179,12 @@
   }
 }
 
-
 .modal__container_type_image .modal__close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-
-  .modal__caption {
-    font-size: 12px;
-  }
-
+.modal__caption {
+  font-size: 12px;
+}
