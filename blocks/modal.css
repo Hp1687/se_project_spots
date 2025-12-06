@@ -1,26 +1,23 @@
-/* TODO - add correct font styles for everything */
-/* TODO - responsiv design */
+/* --- Base Modal Overlay --- */
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0; /* Start hidden */
-  visibility: hidden; /* Prevent interaction when hidden */
+  opacity: 0;
+  visibility: hidden;
   z-index: 100;
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth open/close */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal_is-opened {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 
+/* --- General Modal Container --- */
 .modal__container {
   max-width: 730px;
   width: 100%;
@@ -30,12 +27,13 @@
   position: relative;
   box-sizing: border-box;
 
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   color: #212121;
 }
 
+/* --- Close Button --- */
 .modal__close-btn {
   position: absolute;
   top: 32px;
@@ -49,6 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
   transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -63,6 +62,7 @@
   transform: scale(1.05);
 }
 
+/* --- Modal Titles & Form Elements --- */
 .modal__title {
   margin: 0 0 32px;
   font-size: 32px;
@@ -83,13 +83,11 @@
 }
 
 .modal__input {
-  font-size: 20px;
+  font-size: 16px; /* unified mobile-friendly size */
   line-height: 1;
   padding: 16px 12px;
   margin: 8px 0 32px;
   border: 1px solid rgba(33, 33, 33, 0.4);
-
-  display: block;
   border-radius: 6px;
   color: #212121;
   box-sizing: border-box;
@@ -118,73 +116,81 @@
   opacity: 0.85;
 }
 
-@media screen and (max-width: 768px) {
-  .modal__container {
-    padding: 24px;
-    max-width: calc(100% - 40px); /* ← ADD this line */
-  }
-}
-
-/* Mobile-friendly font size for inputs */
-.modal__input {
-  font-size: 16px;
-}
-
-.modal__close-btn {
-  top: 16px;
-  right: 16px;
-  width: 28px;
-  height: 28px;
-}
-
-.modal__submit-btn {
-  max-width: 100%;
-  width: 100%;
-}
-
-.modal__title {
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-
+/* --- Image Preview Modal --- */
 .modal__container_type_image {
+  width: fit-content;
   background-color: transparent;
   border-radius: 0;
   padding: 0;
   max-width: 90vw;
   max-height: 90vh;
-  box-shadow: none; /* remove shadows if inherited */
+  box-shadow: none;
+  margin: 0 auto; /* centers horizontally */
 }
 
 .modal__image {
-  max-width: min(80vw, 800px); /* keeps it big but not massive on desktop */
-  max-height: 80vh; /* never taller than the viewport */
+  max-width: min(80vw, 800px);
+  max-height: 80vh;
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
 .modal__caption {
-  margin-top: 12px;
-  color: #333;
+  margin-top: 10px;
+  color: #fff;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
   text-align: center;
-}
-
-/* Optional: extra breathing room on small phones */
-@media (max-width: 480px) {
-  .modal__image {
-    max-width: 90vw;
-    max-height: 70vh;
-  }
+  max-width: 90%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal__container_type_image .modal__close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
 }
 
-.modal__caption {
-  font-size: 12px;
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 768px) {
+  .modal__container {
+    padding: 24px;
+    max-width: calc(100% - 40px);
+  }
+
+  .modal__title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .modal__submit-btn {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal__caption {
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  .modal__container_type_image {
+    max-width: 95vw;
+    max-height: 90vh;
+  }
+
+  .modal__container_type_image .modal__close-btn {
+    top: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+  }
 }
