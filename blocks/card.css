@@ -18,7 +18,7 @@
 }
 
 .card__image:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   opacity: 0.8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -56,9 +56,6 @@
   width: 24px;
   height: 24px;
   background-image: url("../images/delete-icon.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
