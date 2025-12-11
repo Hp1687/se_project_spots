@@ -10,6 +10,7 @@
   visibility: hidden;
   z-index: 100;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 0 10px; /* horizontal padding per reviewer */
 }
 
 .modal_is-opened {
@@ -23,26 +24,23 @@
   width: 100%;
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 36px 50px 32px;
+  padding: 36px 50px 32px; /* top, right, bottom */
   position: relative;
   box-sizing: border-box;
-
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.4;
   color: #212121;
 }
 
-/* --- Close Button --- */
+/* --- Base Close Button (for all modals) --- */
 .modal__close-btn {
   position: absolute;
-  top: 32px;
-  right: 50px;
-  width: 40px;
-  height: 40px;
+  top: 32px; /* desktop default for base modal */
+  right: 42px; /* 8px inside padding for visual balance */
+  width: 32px;
+  height: 32px;
   border: none;
   background: transparent;
-  padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -83,7 +81,7 @@
 }
 
 .modal__input {
-  font-size: 16px; /* unified mobile-friendly size */
+  font-size: 16px;
   line-height: 1;
   padding: 16px 12px;
   margin: 8px 0 32px;
@@ -129,20 +127,19 @@
 }
 
 .modal__image {
-  max-width: min(80vw, 800px);
+  border-radius: 8px;
+  max-width: 80vw; /* corrected */
+  width: 100%; /* corrected */
   max-height: 80vh;
-  width: auto;
-  height: auto;
   object-fit: contain;
 }
 
 .modal__caption {
   margin-top: 10px;
   color: #fff;
-  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.5); /* caption background */
+  font-size: 20px; /* desktop */
   font-weight: 500;
-  line-height: 1.45;
-  text-align: center;
   max-width: 90%;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -151,18 +148,34 @@
   margin-right: auto;
 }
 
+/* --- Image Modal Close Button --- */
 .modal__container_type_image .modal__close-btn {
-  top: 12px;
-  right: 12px;
-  width: 24px;
-  height: 24px;
+  top: 16px; /* desktop */
+  right: 16px; /* desktop */
+  background-image: url("../images/close-white.svg"); /* white icon */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* --- Responsive Adjustments --- */
 @media screen and (max-width: 768px) {
+  /* Base modal close button (regular modals) */
+  .modal__close-btn {
+    top: 12px; /* mobile per reviewer */
+    right: 12px;
+  }
+
+  /* Image modal close button */
+  .modal__container_type_image .modal__close-btn {
+    top: 12px; /* mobile */
+    right: 12px; /* mobile */
+  }
+
   .modal__container {
-    padding: 24px;
-    max-width: calc(100% - 40px);
+    padding: 22px 12px 12px; /* mobile padding */
   }
 
   .modal__title {
@@ -176,21 +189,22 @@
 }
 
 @media screen and (max-width: 480px) {
+  .modal__image {
+    max-width: unset; /* mobile fix */
+  }
+
   .modal__caption {
-    font-size: 13px;
+    font-size: 16px; /* mobile */
     margin-top: 8px;
-    line-height: 1.4;
   }
 
   .modal__container_type_image {
-    max-width: 95vw;
-    max-height: 90vh;
+    margin: 0;
+    padding: 0;
   }
 
   .modal__container_type_image .modal__close-btn {
-    top: 8px;
-    right: 8px;
-    width: 20px;
-    height: 20px;
+    top: 12px;
+    right: 12px;
   }
 }
