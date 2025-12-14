@@ -71,24 +71,24 @@
 .card__like-button {
   width: 24px;
   height: 24px;
-  background-image: url("../images/heart.svg"); /* empty heart */
-  background-size: contain; /* ensures the icon fits */
-  background-position: center; /* centers the icon */
+  background-image: url("../images/heart.svg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-color: transparent; /* button stays transparent */
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  opacity: 0.4; /* default faded state */
+  opacity: 0.4;
   transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
-.card__like-button:hover {
-  opacity: 0.8;
-  transform: scale(1.1); /* subtle zoom on hover */
+.card__like-button_active {
+  background-image: url("../images/heart-filled.svg");
+  opacity: 1;
 }
 
 /* --- ACTIVE (LIKED) STATE --- */
 .card__like-button_active {
+  opacity: 1;
   background-image: url("../images/heart-filled.svg"); /* only change the icon */
   /* NO background-color, NO border-radius, NO opacity changes */
 }

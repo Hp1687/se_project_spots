@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
+
   <body>
     <div class="page">
       <!-- HEADER -->
@@ -26,51 +27,59 @@
         <section class="profile page__section">
           <img
             src="./images/avatar.jpg"
-            alt="Bessi Coleman"
+            alt="Bessie Coleman"
             class="profile__avatar"
           />
+
           <div class="profile__column">
             <h1 class="profile__name">
               Bessie Coleman Aliaune Damala Bouga Time Bongo Puru Nacka Lu Lu Lu
               Badara Akon
             </h1>
+
             <p class="profile__description">
               Civil Aviator Known mononymously as Akon (/ˈeɪkɒn/), is a
               Senegalese-American singer, record producer, and...
             </p>
+
             <button type="button" class="profile__edit-btn">
-              <img src="./images/pencil.svg" alt="Pencil icon" />
+              <img src="./images/pencil.svg" alt="Edit icon" />
               Edit Profile
             </button>
           </div>
+
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="Plus icon" />
+            <img src="./images/plus.svg" alt="Add icon" />
             New Post
           </button>
         </section>
 
         <!-- CARDS SECTION -->
         <section class="cards page__section">
-          <!-- Card template -->
+          <!-- CARD TEMPLATE -->
           <template id="card-template">
             <li class="card">
               <img class="card__image" alt="" />
+
               <button
                 class="card__delete-button"
                 type="button"
                 aria-label="Delete card"
               ></button>
+
               <div class="card__content">
                 <h2 class="card__title"></h2>
                 <button
                   class="card__like-button"
+                  type="button"
                   aria-label="Like card"
                 ></button>
               </div>
             </li>
           </template>
+
           <ul class="cards__list">
-            <!-- Cards will be generated here via JavaScript -->
+            <!-- Cards are rendered by JavaScript -->
           </ul>
         </section>
       </main>
@@ -86,22 +95,32 @@
           <button type="button" class="modal__close-btn">
             <img src="./images/close-icon.svg" alt="Close" />
           </button>
+
           <form class="modal__form">
             <h2 class="modal__title">Edit Profile</h2>
-            <input
-              id="profile-name-input"
-              type="text"
-              class="modal__input"
-              placeholder="Type your name"
-              required
-            />
-            <input
-              id="profile-description-input"
-              type="text"
-              class="modal__input"
-              placeholder="Describe yourself"
-              required
-            />
+
+            <label class="modal__label" for="profile-name-input">
+              Name
+              <input
+                id="profile-name-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+                required
+              />
+            </label>
+
+            <label class="modal__label" for="profile-description-input">
+              Description
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+                required
+              />
+            </label>
+
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
@@ -113,22 +132,32 @@
           <button type="button" class="modal__close-btn">
             <img src="./images/close-icon.svg" alt="Close" />
           </button>
+
           <form class="modal__form">
             <h2 class="modal__title">New Post</h2>
-            <input
-              id="post-image-input"
-              type="url"
-              class="modal__input"
-              placeholder="Place a link to the picture"
-              required
-            />
-            <input
-              id="post-caption-input"
-              type="text"
-              class="modal__input"
-              placeholder="Type your caption"
-              required
-            />
+
+            <label class="modal__label" for="post-image-input">
+              Image URL
+              <input
+                id="post-image-input"
+                type="url"
+                class="modal__input"
+                placeholder="Place a link to the picture"
+                required
+              />
+            </label>
+
+            <label class="modal__label" for="post-caption-input">
+              Caption
+              <input
+                id="post-caption-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+                required
+              />
+            </label>
+
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
@@ -140,7 +169,9 @@
           <button type="button" class="modal__close-btn">
             <img src="./images/close-white.svg" alt="Close" />
           </button>
+
           <img class="modal__image" src="#" alt="Preview image" />
+
           <p class="modal__caption"></p>
         </div>
       </div>
@@ -149,4 +180,3 @@
     <script src="./scripts/index.js"></script>
   </body>
 </html>
-`

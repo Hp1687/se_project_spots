@@ -20,11 +20,11 @@
 
 /* --- General Modal Container --- */
 .modal__container {
-  max-width: 730px;
+  max-width: calc(100% - 40px);
   width: 100%;
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 36px 50px 32px; /* top, right, bottom */
+  padding: 22px 12px 12px; /* top, right, bottom */
   position: relative;
   box-sizing: border-box;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -35,8 +35,8 @@
 /* --- Base Close Button (for all modals) --- */
 .modal__close-btn {
   position: absolute;
-  top: 32px; /* desktop default for base modal */
-  right: 50px; /* 8px inside padding for visual balance */
+  top: 12px;
+  right: 12px;
   width: 32px;
   height: 32px;
   border: none;
@@ -119,6 +119,7 @@
   width: fit-content;
   background-color: transparent;
   padding: 0;
+  margin: 0 auto;
 }
 
 .modal__image {
@@ -132,16 +133,16 @@
 .modal__caption {
   margin-top: 10px;
   padding: 8px 12px;
-  color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   font-size: 20px;
   font-weight: 500;
 }
 
 /* --- Image Modal Close Button --- */
 .modal__container_type_image .modal__close-btn {
-  top: 16px; /* desktop */
-  right: 16px; /* desktop */
+  top: 12px; /* desktop */
+  right: 12px; /* desktop */
 }
 
 /* --- Responsive Adjustments --- */
