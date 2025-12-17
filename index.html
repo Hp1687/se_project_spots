@@ -9,19 +9,21 @@
     />
     <meta name="author" content="Harry Patel" />
     <meta name="keywords" content="Spots, web design, HTML, CSS, project" />
+
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
     <title>Spots</title>
   </head>
 
   <body>
     <div class="page">
-      <!-- HEADER -->
+      <!-- ================= HEADER ================= -->
       <header class="header">
         <img src="./images/logo.svg" alt="Spots Logo" class="header__logo" />
       </header>
 
-      <!-- MAIN CONTENT -->
+      <!-- ================= MAIN ================= -->
       <main class="content">
         <!-- PROFILE SECTION -->
         <section class="profile page__section">
@@ -56,121 +58,111 @@
 
         <!-- CARDS SECTION -->
         <section class="cards page__section">
-          <!-- CARD TEMPLATE -->
           <template id="card-template">
             <li class="card">
               <img class="card__image" alt="" />
 
               <button
-                class="card__delete-button"
                 type="button"
+                class="card__delete-button"
                 aria-label="Delete card"
               ></button>
 
               <div class="card__content">
                 <h2 class="card__title"></h2>
+
                 <button
-                  class="card__like-button"
                   type="button"
+                  class="card__like-button"
                   aria-label="Like card"
                 ></button>
               </div>
             </li>
           </template>
 
-          <ul class="cards__list">
-            <!-- Cards are rendered by JavaScript -->
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
       </main>
 
-      <!-- FOOTER -->
+      <!-- ================= FOOTER ================= -->
       <footer class="footer page__section">
-        <p class="footer__copyright">© 2025 Spots Project by Harry Patel</p>
+        <p class="footer__copyright">
+          © 2025 Spots Project by Harry Patel
+        </p>
       </footer>
 
-      <!-- EDIT PROFILE MODAL -->
+      <!-- ================= EDIT PROFILE MODAL ================= -->
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn">
-            <img src="./images/close-icon.svg" alt="Close" />
-          </button>
+          <button type="button" class="modal__close-button"></button>
 
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <h2 class="modal__title">Edit Profile</h2>
 
-            <label class="modal__label" for="profile-name-input">
-              Name
-              <input
-                id="profile-name-input"
-                type="text"
-                class="modal__input"
-                placeholder="Type your name"
-                required
-              />
-            </label>
+            <input
+              id="profile-name-input"
+              type="text"
+              class="modal__input"
+              placeholder="Type your name"
+              required
+            />
 
-            <label class="modal__label" for="profile-description-input">
-              Description
-              <input
-                id="profile-description-input"
-                type="text"
-                class="modal__input"
-                placeholder="Describe yourself"
-                required
-              />
-            </label>
+            <input
+              id="profile-description-input"
+              type="text"
+              class="modal__input"
+              placeholder="Describe yourself"
+              required
+            />
 
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button type="submit" class="modal__submit-button">
+              Save
+            </button>
           </form>
         </div>
       </div>
 
-      <!-- NEW POST MODAL -->
+      <!-- ================= NEW POST MODAL ================= -->
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn">
-            <img src="./images/close-icon.svg" alt="Close" />
-          </button>
+          <button type="button" class="modal__close-button"></button>
 
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <h2 class="modal__title">New Post</h2>
 
-            <label class="modal__label" for="post-image-input">
-              Image URL
-              <input
-                id="post-image-input"
-                type="url"
-                class="modal__input"
-                placeholder="Place a link to the picture"
-                required
-              />
-            </label>
+            <input
+              id="post-image-input"
+              type="url"
+              class="modal__input"
+              placeholder="Place a link to the picture"
+              required
+            />
 
-            <label class="modal__label" for="post-caption-input">
-              Caption
-              <input
-                id="post-caption-input"
-                type="text"
-                class="modal__input"
-                placeholder="Type your caption"
-                required
-              />
-            </label>
+            <input
+              id="post-caption-input"
+              type="text"
+              class="modal__input"
+              placeholder="Type your caption"
+              required
+            />
 
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button type="submit" class="modal__submit-button">
+              Save
+            </button>
           </form>
         </div>
       </div>
 
-      <!-- IMAGE PREVIEW MODAL -->
+      <!-- ================= IMAGE PREVIEW MODAL ================= -->
       <div class="modal" id="image-preview-modal">
         <div class="modal__container modal__container_type_image">
-          <button type="button" class="modal__close-btn">
-            <img src="./images/close-white.svg" alt="Close" />
-          </button>
+          <button type="button" class="modal__close-button"></button>
 
-          <img class="modal__image" src="#" alt="Preview image" />
+          <img
+            src="#"
+            alt="Preview image"
+            class="modal__image"
+          />
 
           <p class="modal__caption"></p>
         </div>
