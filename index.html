@@ -56,21 +56,19 @@
           </button>
         </section>
 
-        <!-- CARDS SECTION -->
+        <!-- ================= CARDS SECTION ================= -->
         <section class="cards page__section">
           <template id="card-template">
             <li class="card">
               <img class="card__image" alt="" />
-
               <button
                 type="button"
                 class="card__delete-button"
                 aria-label="Delete card"
               ></button>
 
-              <div class="card__content">
+              <div class="card__footer">
                 <h2 class="card__title"></h2>
-
                 <button
                   type="button"
                   class="card__like-button"
@@ -86,21 +84,24 @@
 
       <!-- ================= FOOTER ================= -->
       <footer class="footer page__section">
-        <p class="footer__copyright">
-          © 2025 Spots Project by Harry Patel
-        </p>
+        <p class="footer__copyright">© 2025 Spots Project by Harry Patel</p>
       </footer>
 
       <!-- ================= EDIT PROFILE MODAL ================= -->
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-button"></button>
+          <button
+            type="button"
+            class="modal__close-button modal__close-button_type_form"
+            aria-label="Close modal"
+          ></button>
 
           <form class="modal__form" novalidate>
             <h2 class="modal__title">Edit Profile</h2>
 
             <input
               id="profile-name-input"
+              name="name"
               type="text"
               class="modal__input"
               placeholder="Type your name"
@@ -109,15 +110,14 @@
 
             <input
               id="profile-description-input"
+              name="description"
               type="text"
               class="modal__input"
               placeholder="Describe yourself"
               required
             />
 
-            <button type="submit" class="modal__submit-button">
-              Save
-            </button>
+            <button type="submit" class="modal__submit-button">Save</button>
           </form>
         </div>
       </div>
@@ -125,13 +125,18 @@
       <!-- ================= NEW POST MODAL ================= -->
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-button"></button>
+          <button
+            type="button"
+            class="modal__close-button modal__close-button_type_form"
+            aria-label="Close modal"
+          ></button>
 
           <form class="modal__form" novalidate>
             <h2 class="modal__title">New Post</h2>
 
             <input
               id="post-image-input"
+              name="image"
               type="url"
               class="modal__input"
               placeholder="Place a link to the picture"
@@ -140,30 +145,28 @@
 
             <input
               id="post-caption-input"
+              name="caption"
               type="text"
               class="modal__input"
               placeholder="Type your caption"
               required
             />
 
-            <button type="submit" class="modal__submit-button">
-              Save
-            </button>
+            <button type="submit" class="modal__submit-button">Save</button>
           </form>
         </div>
       </div>
 
       <!-- ================= IMAGE PREVIEW MODAL ================= -->
       <div class="modal" id="image-preview-modal">
-        <div class="modal__container modal__container_type_image">
-          <button type="button" class="modal__close-button"></button>
+        <div class="modal__container modal__container_type_preview">
+          <button
+            type="button"
+            class="modal__close-button modal__close-button_type_preview"
+            aria-label="Close modal"
+          ></button>
 
-          <img
-            src="#"
-            alt="Preview image"
-            class="modal__image"
-          />
-
+          <img class="modal__image" src="#" alt="Preview image" />
           <p class="modal__caption"></p>
         </div>
       </div>
