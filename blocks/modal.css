@@ -29,11 +29,19 @@
 .modal__container {
   position: relative;
   width: 100%;
-  max-width: 430px;
+  max-width: 730px;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 22px 12px 12px; /* REQUIRED */
+  padding: 36px 50px 32px; /* REQUIRED */
   box-sizing: border-box;
+}
+
+.modal__title {
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  color: #212121;
 }
 
 /* =========================
@@ -42,8 +50,7 @@
 
 .modal__container_type_preview {
   position: relative;
-  width: 100%;
-  max-width: 80vw; /* NOT 90vw */
+  max-width: fit-content;
   background-color: transparent;
   border-radius: 8px;
   padding: 0;
@@ -55,10 +62,11 @@
    ========================= */
 
 .modal__image {
-  width: 100%;
-  height: auto;
-  display: block;
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
   border-radius: 8px;
+  display: block;
 }
 
 /* =========================
@@ -72,6 +80,18 @@
   color: #ffffff;
   font-size: 20px;
   box-sizing: border-box;
+}
+
+.modal__submit-button {
+  font-size: 16px;
+  color: #fcf5e5;
+  width: 100%;
+  max-width: 156px;
+  padding: 18px 0;
+  background: #212121;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 /* =========================
@@ -97,7 +117,7 @@
    ========================= */
 
 .modal__close-button_type_form {
-  background-image: url("../images/close-icon.svg");
+  background-image: url("../images/close.svg");
 }
 
 /* =========================
@@ -105,7 +125,7 @@
    ========================= */
 
 .modal__close-button_type_preview {
-  background-image: url("../images/close-icon-white.svg"); /* MUST BE WHITE */
+  background-image: url("../images/close-white.svg");
 }
 
 /* =========================
@@ -113,7 +133,6 @@
    ========================= */
 
 @media screen and (max-width: 630px) {
-
   .modal__container_type_preview {
     margin: 0;
     padding: 0;
@@ -131,4 +150,15 @@
     top: 12px;
     right: 12px;
   }
+}
+/* =========================
+   MODAL FORM LABEL
+   ========================= */
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  color: #212121;
 }

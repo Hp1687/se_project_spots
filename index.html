@@ -99,23 +99,29 @@
           <form class="modal__form" novalidate>
             <h2 class="modal__title">Edit Profile</h2>
 
-            <input
-              id="profile-name-input"
-              name="name"
-              type="text"
-              class="modal__input"
-              placeholder="Type your name"
-              required
-            />
+            <label class="modal__label">
+              Name
+              <input
+                id="profile-name-input"
+                name="name"
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+                required
+              />
+            </label>
 
-            <input
-              id="profile-description-input"
-              name="description"
-              type="text"
-              class="modal__input"
-              placeholder="Describe yourself"
-              required
-            />
+            <label class="modal__label">
+              Description
+              <input
+                id="profile-description-input"
+                name="description"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+                required
+              />
+            </label>
 
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
@@ -134,23 +140,29 @@
           <form class="modal__form" novalidate>
             <h2 class="modal__title">New Post</h2>
 
-            <input
-              id="post-image-input"
-              name="image"
-              type="url"
-              class="modal__input"
-              placeholder="Place a link to the picture"
-              required
-            />
+            <label class="modal__label">
+              Image link
+              <input
+                id="post-image-input"
+                name="image"
+                type="url"
+                class="modal__input"
+                placeholder="Place a link to the picture"
+                required
+              />
+            </label>
 
-            <input
-              id="post-caption-input"
-              name="caption"
-              type="text"
-              class="modal__input"
-              placeholder="Type your caption"
-              required
-            />
+            <label class="modal__label">
+              Caption
+              <input
+                id="post-caption-input"
+                name="caption"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+                required
+              />
+            </label>
 
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
